@@ -1,6 +1,11 @@
 <?php
 $adjectives = include('words/adjectives.php');
-$nouns = include('words/nouns.php');
+
+$nouns = match($_GET['style']){
+	'animals' => include('words/animals.php'),
+	'aquatic' => include('words/aquatic.php'),
+	default => include('words/nouns.php'),
+};
 
 $pseudonym = join(' ', [
 	$adjectives[array_rand($adjectives)],
