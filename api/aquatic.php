@@ -1,6 +1,6 @@
 <?php
-$adjectives = include('../words/adjectives.php');
-$animals = include('../words/aquatic-animals.php');
+$adjectives = include('words/adjectives.php');
+$animals = include('words/aquatic-animals.php');
 
 $pseudonym = join(' ', [
 	$adjectives[array_rand($adjectives)],
