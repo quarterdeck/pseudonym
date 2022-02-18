@@ -1,7 +1,7 @@
 <?php
 $adjectives = include('words/adjectives.php');
 
-$nouns = match($_GET['style']){
+$nouns = match($_GET['style'] ?? null){
 	'animals' => include('words/animals.php'),
 	'aquatic' => include('words/aquatic.php'),
 	default => include('words/nouns.php'),
